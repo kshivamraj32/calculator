@@ -269,131 +269,157 @@ case 1:printf("\nenter the numbers");
 scanf("%lf%lf",&a,&b);
 sum(a,b);
 printf("\n ans=%lf",ans);
+break;
 
 case 2:printf("\nenter the numbers");
 scanf("%lf%lf",&a,&b);
 min(a,b);
 printf("\n ans=%lf",ans);
+break;
 
 case 3:printf("\nenter the numbers");
 scanf("%lf%lf",&a,&b);
 pro(a,b);
 printf("\n ans=%lf",ans);
+break;
 
 case 4:printf("\nenter the numbers");
 scanf("%lf%lf",&a,&b);
 div(a,b);
 printf("\n ans=%lf",ans);
+break;
 
 case 5:printf("\nenter the number");
 scanf("%lf",&a);
 fact(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 6:printf("\nenter the numbers");
 scanf("%lf%lf",&a,&b);
 mod(a,b);
 printf("\n ans=%lf",ans);
+break;
 
 case 7:printf("\nenter the number");
 scanf("%lf",&a);
 abso(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 8:printf("\nenter the numbers");
 scanf("%lf%lf",&a,&b);
 power(a,b);
 printf("\n ans=%lf",ans);
+break;
 
 case 9:printf("\nenter the number");
 scanf("%lf",&a);
 sq(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 10:printf("\nenter the number");
 scanf("%lf",&a);
 sqrt1(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 11:printf("\nenter the number");
 scanf("%lf",&a);
 cube(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 12:printf("\nenter the number");
 scanf("%lf",&a);
 cubert(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 13:printf("\nenter the number");
 scanf("%lf",&a);
 inv(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 14:printf("\nenter the number");
 scanf("%lf",&a);
 arccos(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 15:printf("\nenter the number");
 scanf("%lf",&a);
 arcsin(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 16:printf("\nenter the number");
 scanf("%lf",&a);
 arctan(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 17:printf("\nenter the numbers");
 scanf("%lf%lf",&a,&b);
 arctan2(a,b);
 printf("\n ans=%lf",ans);
+break;
 
 case 18:printf("\nenter the number");
 scanf("%lf",&a);
 cosfn(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 19:printf("\nenter the number");
 scanf("%lf",&a);
 secfn(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 20:printf("\nenter the number");
 scanf("%lf",&a);
 sinfn(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 21:printf("\nenter the number");
 scanf("%lf",&a);
 cosecfn(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 22:printf("\nenter the number");
 scanf("%lf",&a);
 tanfn(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 23:printf("\nenter the number");
 scanf("%lf",&a);
 cotfn(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 24:printf("\nenter the number");
 scanf("%lf",&a);
 hcos(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 25:printf("\nenter the number");
 scanf("%lf",&a);
 hsin(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 26:printf("\nenter the number");
 scanf("%lf",&a);
 htan(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 27:printf("\nenter the real and img part of number 1");
 scanf("%lf %lf",&c1.re,&c1.im);
@@ -401,6 +427,7 @@ printf("\nenter the real and img part of number 2");
 scanf("%lf %lf",&c2.re,&c2.im);
 sumc(c1,c2);
 printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
+break;
 
 case 28:printf("\nenter the real and img part of number 1");
 scanf("%lf %lf",&c1.re,&c1.im);
@@ -408,6 +435,7 @@ printf("\nenter the real and img part of number 2");
 scanf("%lf %lf",&c2.re,&c2.im);
 minc(c1,c2);
 printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
+break;
 
 case 29:printf("\nenter the real and img part of number 1");
 scanf("%lf %lf",&c1.re,&c1.im);
@@ -415,21 +443,25 @@ printf("\nenter the real and img part of number 2");
 scanf("%lf %lf",&c2.re,&c2.im);
 proc(c1,c2);
 printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
+break;
 
 case 30:printf("\nenter the real and img part of number");
 scanf("%lf %lf",&c1.re,&c1.im);
 modc(c1);
 printf("\n ans=%lf",ans);
+break;
 
 case 31:printf("\nenter the real and img part of number");
 scanf("%lf %lf",&c1.re,&c1.im);
 argc(c1);
 printf("\n ans=%lf",ans);
+break;
 
 case 32:printf("\nenter the real and img part of number");
 scanf("%lf %lf",&c1.re,&c1.im);
 conjc(c1);
 printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
+break;
 
 case 33:printf("\nenter the real and img part of number 1");
 scanf("%lf %lf",&c1.re,&c1.im);
@@ -437,41 +469,49 @@ printf("\nenter the real and img part of number 2");
 scanf("%lf %lf",&c2.re,&c2.im);
 divc(c1,c2);
 printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
+break;
 
 case 34:printf("\nenter the real and img part of number");
 scanf("%lf %lf",&c1.re,&c1.im);
 toRTh(c1);
 printf("\n r=%lf th= %lf",ansrth.r,ansrth.th);
+break;
 
 case 35:printf("\nenter the r and theta of the number");
 scanf("%lf %lf",&ansrth.r,&ansrth.th);
 fromRTh(ansrth);
 printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
+break;
 
 case 36:printf("\nenter the number");
 scanf("%lf",&a);
 expo(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 37:printf("\nenter the number");
 scanf("%lf",&a);
 loga(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 38:printf("\nenter the number");
 scanf("%lf",&a);
 log10a(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 39:printf("\nenter the number");
 scanf("%lf",&a);
 deg2rad(a);
 printf("\n ans=%lf",ans);
+break;
 
 case 40:printf("\nenter the number");
 scanf("%lf",&a);
 rad2deg(a);
 printf("\n ans=%lf",ans);
+break;
 
 }
 printf("\ndo you want to exit? press y for it and any other letter for no");
