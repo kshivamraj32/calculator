@@ -212,7 +212,7 @@ void main()
 printf("WELCOME TO THE JOURNEY WITH CALCULATOR");
 char exit='n';
 int ch=0;
-int a,b;
+double a,b;
 cmp c1,c2;
 do
 {
@@ -223,7 +223,7 @@ printf("\npress 2 for a-b ");
 printf("\npress 3 for a*b ");
 printf("\npress 4 for a/b ");
 printf("\npress 5 for a! ");
-printf("\npress 6 for a%b ");
+printf("\npress 6 for a mod b ");
 printf("\npress 7 for absolute value of a ");
 printf("\npress 8 for a^b ");
 printf("\npress 9 for a square ");
@@ -266,212 +266,212 @@ scanf("%d",&ch);
 switch(ch)
 {
 case 1:printf("\nenter the numbers");
-scanf("%d%d",&a,&b);
+scanf("%lf%lf",&a,&b);
 sum(a,b);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 2:printf("\nenter the numbers");
-scanf("%d%d",&a,&b);
+scanf("%lf%lf",&a,&b);
 min(a,b);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 3:printf("\nenter the numbers");
-scanf("%d%d",&a,&b);
+scanf("%lf%lf",&a,&b);
 pro(a,b);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 4:printf("\nenter the numbers");
-scanf("%d%d",&a,&b);
+scanf("%lf%lf",&a,&b);
 div(a,b);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 5:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 fact(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 6:printf("\nenter the numbers");
-scanf("%d%d",&a,&b);
+scanf("%lf%lf",&a,&b);
 mod(a,b);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 7:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 abso(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 8:printf("\nenter the numbers");
-scanf("%d%d",&a,&b);
+scanf("%lf%lf",&a,&b);
 power(a,b);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 9:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 sq(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 10:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 sqrt1(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 11:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 cube(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 12:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 cubert(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 13:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 inv(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 14:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 arccos(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 15:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 arcsin(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 16:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 arctan(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 17:printf("\nenter the numbers");
-scanf("%d%d",&a,&b);
+scanf("%lf%lf",&a,&b);
 arctan2(a,b);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 18:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 cosfn(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 19:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 secfn(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 20:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 sinfn(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 21:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 cosecfn(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 22:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 tanfn(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 23:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 cotfn(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 24:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 hcos(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 25:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 hsin(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 26:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 htan(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 27:printf("\nenter the real and img part of number 1");
-scanf("%d",&c1.re,&c1.im);
+scanf("%lf %lf",&c1.re,&c1.im);
 printf("\nenter the real and img part of number 2");
-scanf("%d",&c2.re,&c2.im);
+scanf("%lf %lf",&c2.re,&c2.im);
 sumc(c1,c2);
-printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
 
 case 28:printf("\nenter the real and img part of number 1");
-scanf("%d",&c1.re,&c1.im);
+scanf("%lf %lf",&c1.re,&c1.im);
 printf("\nenter the real and img part of number 2");
-scanf("%d",&c2.re,&c2.im);
+scanf("%lf %lf",&c2.re,&c2.im);
 minc(c1,c2);
-printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
 
 case 29:printf("\nenter the real and img part of number 1");
-scanf("%d",&c1.re,&c1.im);
+scanf("%lf %lf",&c1.re,&c1.im);
 printf("\nenter the real and img part of number 2");
-scanf("%d",&c2.re,&c2.im);
+scanf("%lf %lf",&c2.re,&c2.im);
 proc(c1,c2);
-printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
 
 case 30:printf("\nenter the real and img part of number");
-scanf("%d",&c1.re,&c1.im);
+scanf("%lf %lf",&c1.re,&c1.im);
 modc(c1);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 31:printf("\nenter the real and img part of number");
-scanf("%d",&c1.re,&c1.im);
+scanf("%lf %lf",&c1.re,&c1.im);
 argc(c1);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 32:printf("\nenter the real and img part of number");
-scanf("%d",&c1.re,&c1.im);
+scanf("%lf %lf",&c1.re,&c1.im);
 conjc(c1);
-printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
 
 case 33:printf("\nenter the real and img part of number 1");
-scanf("%d",&c1.re,&c1.im);
+scanf("%lf %lf",&c1.re,&c1.im);
 printf("\nenter the real and img part of number 2");
-scanf("%d",&c2.re,&c2.im);
+scanf("%lf %lf",&c2.re,&c2.im);
 divc(c1,c2);
-printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
 
 case 34:printf("\nenter the real and img part of number");
-scanf("%d",&c1.re,&c1.im);
+scanf("%lf %lf",&c1.re,&c1.im);
 toRTh(c1);
-printf("\n r=%d th= %d",ansrth.r,ansrth.th);
+printf("\n r=%lf th= %lf",ansrth.r,ansrth.th);
 
 case 35:printf("\nenter the r and theta of the number");
-scanf("%d",&ansrth.r,&ansrth.th);
+scanf("%lf %lf",&ansrth.r,&ansrth.th);
 fromRTh(ansrth);
-printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+printf("\n ans=%lf+ i %lf",ansc.re,ansc.im);
 
 case 36:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 expo(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 37:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 loga(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 38:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 log10a(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 39:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 deg2rad(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 case 40:printf("\nenter the number");
-scanf("%d",&a);
+scanf("%lf",&a);
 rad2deg(a);
-printf("\n ans=%d",ans);
+printf("\n ans=%lf",ans);
 
 }
 printf("\ndo you want to exit? press y for it and any other letter for no");
