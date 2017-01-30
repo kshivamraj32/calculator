@@ -1,0 +1,480 @@
+//+-*/,a^b,e,abs,a^2,a^3,a^0.5,a^0.33,trigo-6fns,log,ln,x^-1,factorial
+#include<stdio.h>
+#include<math.h>
+#define PI 3.14159
+double ans=0;
+typedef struct
+{
+double re;
+double im;
+}cmp;
+typedef struct
+{
+double r;
+double th;
+}rth;
+cmp ansc;
+rth ansrth;
+
+void sum(double a, double b)
+{
+ans=a+b;
+}
+void min(double a, double b)
+{
+ans=a-b;
+}
+void pro(double a, double b)
+{
+ans=a*b;
+}
+void div(double a, double b)
+{
+if(b!=0)
+ans=a/b;
+else
+ans=999999;
+}
+void fact(int a)
+{
+if(a>=0){
+int n=1,pro=1;
+for(n=1;n<=a;n++)
+pro*=n;
+ans=pro;}
+else
+ans=0;
+}
+void mod(int a, int b)
+{
+ans=a%b;
+}
+void abso(double a)
+{
+if(a<0)
+a*=-1;
+ans =a;
+}
+void power(double a,double b)
+{
+ans=pow(a,b);
+}
+void sq(double a)
+{
+power(a,2.0);
+}
+void sqrt1(double a)
+{
+power(a,0.5);
+}
+void cube(double a)
+{
+power(a,3.0);
+}
+void cubert(double a)
+{
+power(a,1.0/3);
+}
+
+void inv(double a)
+{
+ans= 1/a;
+}
+void arccos(double a)
+{
+ans=acos(a);
+}
+
+void arcsin(double a)
+{
+ans=asin(a) ;
+}
+void arctan(double a)
+{
+ans=atan(a) ;
+}
+void arctan2(double a,double b)
+{
+ans=atan2(a,b) ;
+}
+void cosfn(double a)
+{
+ans=cos(a) ;
+}
+void secfn(double a)
+{
+cosfn(a);
+ans=1/ans;
+}
+void sinfn(double a)
+{
+ans=sin(a) ;
+}
+void cosecfn(double a)
+{
+sinfn(a);
+ans=1/ans;
+}
+void tanfn(double a)
+{
+ans=tan(a) ;
+}
+void cotfn(double a)
+{
+tanfn(a);
+ans=1/ans;
+}
+void hcos(double a)
+{
+ans= cosh(a) ;
+}
+void hsin(double a)
+{
+ans= sinh(a) ;
+}
+void htan(double a)
+{
+ans= tanh(a);
+}
+
+void sumc(cmp a,cmp b)
+{
+ansc.re=a.re+b.re;
+ansc.im=a.im+b.im;
+}
+void minc(cmp a,cmp b)
+{
+ansc.re=a.re-b.re;
+ansc.im=a.im-b.im;
+}
+void proc(cmp a,cmp b)
+{
+ansc.re=a.re*b.re-a.im*b.im;
+ansc.im=a.re*b.im+a.im*b.re;
+}
+
+void modc(cmp a)
+{
+ans= pow(a.re,2)+pow(a.im,2);
+}
+void argc( cmp a)
+{
+arctan(a.im/a.re);
+}
+void conjc(cmp a)
+{
+ansc.re=a.re;
+ansc.im=a.im*(-1);
+}
+void divc(cmp a,cmp b)
+{
+modc(b);
+double t= ans;
+conjc(b);
+cmp b1=ansc;
+proc(a,b1);
+ansc.re/=t;
+ansc.im/=t;
+}
+void toRTh(cmp a)
+{
+modc(a);
+ansrth.r=ans;
+argc(a);
+ansrth.th=ans;
+}
+void fromRth(rth a)
+{
+ansc.re=a.r*cosf(a.th);
+ansc.im=a.r*sinf(a.th);
+}
+void expo(double a)
+{
+ans=exp(a);
+}
+void loga(double a)
+{
+ans=log(a);
+}
+void log10a(double a)
+{
+ans=log10(a);
+}
+double deg2rad(double a)
+{
+ans=a*PI/180;
+}
+double rad2deg(double a)
+{
+ans=a*180/PI;
+}
+void main()
+{
+printf("WELCOME TO THE JOURNEY WITH CALCULATOR");
+char exit='n';
+int ch=0;
+int a,b;
+cmp c1,c2;
+do
+{
+printf("\nSelect the required menu option. a and b are real numbers. z1 and z2 are complex numbers\n");
+printf("\nARITHMETIC OPERATIONS");
+printf("\npress 1 for a+b ");
+printf("\npress 2 for a-b ");
+printf("\npress 3 for a*b ");
+printf("\npress 4 for a/b ");
+printf("\npress 5 for a! ");
+printf("\npress 6 for a%b ");
+printf("\npress 7 for absolute value of a ");
+printf("\npress 8 for a^b ");
+printf("\npress 9 for a square ");
+printf("\npress 10 for square root of a ");
+printf("\npress 11for a cube ");
+printf("\npress 12 for cube root of a ");
+printf("\npress 13 for a inverse ");
+printf("\nTRIGONOMETRIC OPERATIONS");
+printf("\npress 14 for cos inverse of a ");
+printf("\npress 15 for sin inverse of a");
+printf("\npress 16 for tan inverse of a");
+printf("\npress 17 for tan inverse of a/b");
+printf("\npress 18 for cos(a)");
+printf("\npress 19 for sec(a)");
+printf("\npress 20 for sin(a)");
+printf("\npress 21 for cosec(a)");
+printf("\npress 22 for tan(a)");
+printf("\npress 23 for cot(a)");
+printf("\npress 24 for cosh(a)");
+printf("\npress 25 for sinh(a)");
+printf("\npress 26 for tanh(a)");
+printf("\nCOMPLEX WORLD");
+printf("\npress 27 for z1+z2 ");
+printf("\npress 28 for z1-z2 ");
+printf("\npress 29 for z1*z2 ");
+printf("\npress 30 for modulus of z1 ");
+printf("\npress 31 for argument of z1 ");
+printf("\npress 32 for conjugate of z1 ");
+printf("\npress 33 for z1/z2 ");
+printf("\npress 34 for conversion to euler's form ");
+printf("\npress 35 for conversion from euler's form to normal form");
+printf("\nMISCELLANEOUS OPERATIONS");
+printf("\npress 36 for e^a");
+printf("\npress 37 for ln a");
+printf("\npress 38 for log a");
+printf("\npress 39 for degree to radian conversion");
+printf("\npress 40 for radian to degree conversion");
+printf("\n\nplease enter your choice");
+scanf("%d",&ch);
+switch(ch)
+{
+case 1:printf("\nenter the numbers");
+scanf("%d%d",&a,&b);
+sum(a,b);
+printf("\n ans=%d",ans);
+
+case 2:printf("\nenter the numbers");
+scanf("%d%d",&a,&b);
+min(a,b);
+printf("\n ans=%d",ans);
+
+case 3:printf("\nenter the numbers");
+scanf("%d%d",&a,&b);
+pro(a,b);
+printf("\n ans=%d",ans);
+
+case 4:printf("\nenter the numbers");
+scanf("%d%d",&a,&b);
+div(a,b);
+printf("\n ans=%d",ans);
+
+case 5:printf("\nenter the number");
+scanf("%d",&a);
+fact(a);
+printf("\n ans=%d",ans);
+
+case 6:printf("\nenter the numbers");
+scanf("%d%d",&a,&b);
+mod(a,b);
+printf("\n ans=%d",ans);
+
+case 7:printf("\nenter the number");
+scanf("%d",&a);
+abso(a);
+printf("\n ans=%d",ans);
+
+case 8:printf("\nenter the numbers");
+scanf("%d%d",&a,&b);
+power(a,b);
+printf("\n ans=%d",ans);
+
+case 9:printf("\nenter the number");
+scanf("%d",&a);
+sq(a);
+printf("\n ans=%d",ans);
+
+case 10:printf("\nenter the number");
+scanf("%d",&a);
+sqrt1(a);
+printf("\n ans=%d",ans);
+
+case 11:printf("\nenter the number");
+scanf("%d",&a);
+cube(a);
+printf("\n ans=%d",ans);
+
+case 12:printf("\nenter the number");
+scanf("%d",&a);
+cubert(a);
+printf("\n ans=%d",ans);
+
+case 13:printf("\nenter the number");
+scanf("%d",&a);
+inv(a);
+printf("\n ans=%d",ans);
+
+case 14:printf("\nenter the number");
+scanf("%d",&a);
+arccos(a);
+printf("\n ans=%d",ans);
+
+case 15:printf("\nenter the number");
+scanf("%d",&a);
+arcsin(a);
+printf("\n ans=%d",ans);
+
+case 16:printf("\nenter the number");
+scanf("%d",&a);
+arctan(a);
+printf("\n ans=%d",ans);
+
+case 17:printf("\nenter the numbers");
+scanf("%d%d",&a,&b);
+arctan2(a,b);
+printf("\n ans=%d",ans);
+
+case 18:printf("\nenter the number");
+scanf("%d",&a);
+cosfn(a);
+printf("\n ans=%d",ans);
+
+case 19:printf("\nenter the number");
+scanf("%d",&a);
+secfn(a);
+printf("\n ans=%d",ans);
+
+case 20:printf("\nenter the number");
+scanf("%d",&a);
+sinfn(a);
+printf("\n ans=%d",ans);
+
+case 21:printf("\nenter the number");
+scanf("%d",&a);
+cosecfn(a);
+printf("\n ans=%d",ans);
+
+case 22:printf("\nenter the number");
+scanf("%d",&a);
+tanfn(a);
+printf("\n ans=%d",ans);
+
+case 23:printf("\nenter the number");
+scanf("%d",&a);
+cotfn(a);
+printf("\n ans=%d",ans);
+
+case 24:printf("\nenter the number");
+scanf("%d",&a);
+hcos(a);
+printf("\n ans=%d",ans);
+
+case 25:printf("\nenter the number");
+scanf("%d",&a);
+hsin(a);
+printf("\n ans=%d",ans);
+
+case 26:printf("\nenter the number");
+scanf("%d",&a);
+htan(a);
+printf("\n ans=%d",ans);
+
+case 27:printf("\nenter the real and img part of number 1");
+scanf("%d",&c1.re,&c1.im);
+printf("\nenter the real and img part of number 2");
+scanf("%d",&c2.re,&c2.im);
+sumc(c1,c2);
+printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+
+case 28:printf("\nenter the real and img part of number 1");
+scanf("%d",&c1.re,&c1.im);
+printf("\nenter the real and img part of number 2");
+scanf("%d",&c2.re,&c2.im);
+minc(c1,c2);
+printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+
+case 29:printf("\nenter the real and img part of number 1");
+scanf("%d",&c1.re,&c1.im);
+printf("\nenter the real and img part of number 2");
+scanf("%d",&c2.re,&c2.im);
+proc(c1,c2);
+printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+
+case 30:printf("\nenter the real and img part of number");
+scanf("%d",&c1.re,&c1.im);
+modc(c1);
+printf("\n ans=%d",ans);
+
+case 31:printf("\nenter the real and img part of number");
+scanf("%d",&c1.re,&c1.im);
+argc(c1);
+printf("\n ans=%d",ans);
+
+case 32:printf("\nenter the real and img part of number");
+scanf("%d",&c1.re,&c1.im);
+conjc(c1);
+printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+
+case 33:printf("\nenter the real and img part of number 1");
+scanf("%d",&c1.re,&c1.im);
+printf("\nenter the real and img part of number 2");
+scanf("%d",&c2.re,&c2.im);
+divc(c1,c2);
+printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+
+case 34:printf("\nenter the real and img part of number");
+scanf("%d",&c1.re,&c1.im);
+toRTh(c1);
+printf("\n r=%d th= %d",ansrth.r,ansrth.th);
+
+case 35:printf("\nenter the r and theta of the number");
+scanf("%d",&ansrth.r,&ansrth.th);
+fromRTh(ansrth);
+printf("\n ans=%d+ i %d",ansc.re,ansc.im);
+
+case 36:printf("\nenter the number");
+scanf("%d",&a);
+expo(a);
+printf("\n ans=%d",ans);
+
+case 37:printf("\nenter the number");
+scanf("%d",&a);
+loga(a);
+printf("\n ans=%d",ans);
+
+case 38:printf("\nenter the number");
+scanf("%d",&a);
+log10a(a);
+printf("\n ans=%d",ans);
+
+case 39:printf("\nenter the number");
+scanf("%d",&a);
+deg2rad(a);
+printf("\n ans=%d",ans);
+
+case 40:printf("\nenter the number");
+scanf("%d",&a);
+rad2deg(a);
+printf("\n ans=%d",ans);
+
+}
+printf("\ndo you want to exit? press y for it and any other letter for no");
+}while(exit!='y');
+}
