@@ -182,7 +182,7 @@ ansrth.r=ans;
 argc(a);
 ansrth.th=ans;
 }
-void fromRth(rth a)
+void fromRTh(rth a)
 {
 ansc.re=a.r*cosf(a.th);
 ansc.im=a.r*sinf(a.th);
